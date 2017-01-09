@@ -1,0 +1,2 @@
+class LikedMix < ApplicationRecord
+end
