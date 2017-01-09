@@ -1,21 +1,8 @@
 # README
 
-models:
-user - has many loved mixes, has many shared mixes
-  - id , username
+Welcome to Crossfadr!!!!
 
-dj - has many mixes, has many liked-mixes, has many re-liked mixes.(BOTH THRU MIXES)
- - id , djname
-
-mix - belongs to a dj, has many mixes, has many liked-mixes, has many re-liked mixes.
-  - id, mix title
-
-     #of loved mixes
-     <!-- loved mixes  -->
-     belongs to a mix
-     id, mix_id, dj_id
-     
-
+This is a single page rails-angular application for listening to dj mixes.
 
 
 
