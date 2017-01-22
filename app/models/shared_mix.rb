@@ -1,0 +1,2 @@
+class SharedMix < ApplicationRecord
+end

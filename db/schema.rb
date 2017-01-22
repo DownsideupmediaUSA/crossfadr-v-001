@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170109141629) do
+ActiveRecord::Schema.define(version: 20170122124951) do
 
   create_table "djs", force: :cascade do |t|
     t.string   "dj_name"
@@ -23,11 +23,20 @@ ActiveRecord::Schema.define(version: 20170109141629) do
     t.integer  "dj_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
   end
 
   create_table "mixes", force: :cascade do |t|
     t.string   "title"
     t.integer  "dj_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "shared_mixes", force: :cascade do |t|
+    t.integer  "mix_id"
+    t.integer  "dj_id"
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
