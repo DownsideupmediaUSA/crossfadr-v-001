@@ -1,5 +1,5 @@
 class MixesController < ApplicationController
- before_action: :set_mix, only: [:update]
+ before_action: :set_mix, only: [:update, :shared_mix, :liked_mix, :destroy]
 
   def index
     mixes = Mix.all
@@ -18,7 +18,7 @@ class MixesController < ApplicationController
     end
 
   def update
-     mix = Mix.find_by_id(params[:id])
+
      if mix.update(mix_params)
          render json: { status: 'ok' }
      else
@@ -29,7 +29,7 @@ class MixesController < ApplicationController
    end
 
    def shared_mix
-        mix = Mix.find_by_id(params[:id])
+
         mix.shared_mix.build(user_id: current_user.id)
         if mix.save
             render json: { status: 'ok' }
@@ -41,7 +41,7 @@ class MixesController < ApplicationController
     end
 
    def liked_mix
-        mix = Mix.find_by_id(params[:id])
+
         mix.liked_mix.build(user_id: current_user.id)
         if mix.save
             render json: { status: 'ok' }
@@ -51,8 +51,8 @@ class MixesController < ApplicationController
                 status: :unprocessable_entity
         end
     end
+
     def destroy
-        mix = Mix.find_by_id(params[:id])
         if mix.user == current_user.id
             SharedMix.where("mix_id = ?", mix.id).each { |t| t.destroy }
             LikedTweet.where("mix_id = ?", mix.id).each { |t| t.destroy }
@@ -66,6 +66,14 @@ class MixesController < ApplicationController
         end
     end
 
+  private
 
+    def set_mix
+      mix = Mix.find_by_id(params[:id])
+    end
+
+    def mix_params
+      params.require(:mix).permit(:title)
+    end
 
 end

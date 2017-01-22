@@ -51,3 +51,18 @@ mix - belongs to a dj, has many mixes, has many liked-mixes, has many re-liked m
     ],
   }
 ]
+
+
+<!-- JAVASCRIPT: -->
+
+for front end assets (packaging)
+-bower - (bower-rails)
+-angular templates (angular-rails-templates)
+
+ANGULAR
+-angular js (ng's, controllers, services etc)
+-angular UI Router (routing url)
+-angular devise ( authentication)
+
+Moment.js ( for timestamping)
+Bootstrap
