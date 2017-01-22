@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-
+  root 'application#index'
   devise_for :users
-  root to: 'mixes#index'
+
 
   resources :djs, only: [:show, :edit]
 

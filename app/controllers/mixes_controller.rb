@@ -1,5 +1,5 @@
 class MixesController < ApplicationController
- before_action: :set_mix, only: [:update, :shared_mix, :liked_mix, :destroy]
+ before_action :set_mix, only: [:update, :shared_mix, :liked_mix, :destroy]
 
   def index
     mixes = Mix.all
