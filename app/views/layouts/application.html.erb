@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app>
+<html>
   <head>
     <title>CrossfadrV001</title>
     <%= csrf_meta_tags %>
@@ -8,11 +8,8 @@
     <%= javascript_include_tag 'application' %>
   </head>
 
-  <body>
-
-  
+  <body ng-app="crossfadr">
     <%= yield %>
-
-
   </body>
+
 </html>
