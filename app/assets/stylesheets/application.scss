@@ -18,21 +18,50 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
- div.sidebar-left {
-   float: left;
-   width: 20%;
-   height: 100vh;
-   background-color: #ecf0f1;
-   box-sizing: border-box;
- }
 
- div.main-content {
-  padding: 30px;
-   width: 80%;
-   height: 100vh;
-   box-sizing: border-box;
- }
 
- .navbar {
-   margin-bottom: 0;
- }
+ body {
+    background-color: #ecf0f1;
+}
+
+.sm2-bar-ui.fixed {
+    position: fixed;
+    top: auto;
+    bottom: 100px;
+    left: 100px;
+    border-radius: 0px;
+    overflow: visible;
+    z-index: 999;
+}
+.sm2-bar-ui.full-width {
+    max-width: 100%;
+    z-index: 5;
+}
+.sm2-bar-ui {
+    transition: all 0.2s ease-in-out;
+}
+.sm2-bar-ui {
+    font-size: 15px;
+    text-shadow: none;
+}
+.sm2-bar-ui, .sm2-bar-ui .bd a {
+    color: #95a5a6;
+}
+.sm2-bar-ui {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    font-family: helvetica, arial, verdana, sans-serif;
+    font-weight: normal;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    min-width: 20em;
+    max-width: 30em;
+    border-radius: 2px;
+    overflow: hidden;
+    transition: max-width 0.2s ease-in-out;
+}

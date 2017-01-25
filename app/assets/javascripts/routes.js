@@ -15,10 +15,10 @@
           //    templateUrl: 'mixes/mixes.html',
           //    controller: 'MixController as vm'
           //  })
-          .state('home.userProfile', {
-            url: '/userProfile',
-            templateUrl: 'user/user-profile.html',
-            controller: 'UserProfileController as vm'
+          .state('home.soundmanager', {
+            url: '/soundmanager',
+            templateUrl: 'soundmanager2/soundmanager.html',
+            controller: 'SoundManagerController as vm'
           })
 
 

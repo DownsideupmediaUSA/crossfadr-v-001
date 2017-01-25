@@ -5,6 +5,7 @@
      "angular": "latest",
      "angular-ui-router": "latest",
      "angular-devise": "latest",
+     "angular-soundmanager2": "latest",
      "moment": "latest",
      "bootstrap": "latest"
     }
