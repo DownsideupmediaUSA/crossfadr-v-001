@@ -1,5 +1,4 @@
-(function(){
-  'use strict';
+
 
   function formatMilliseconds(milliseconds) {
    var hours = Math.floor(milliseconds / 3600000);
@@ -29,12 +28,12 @@ var player = {
 var audio = null;
 
 soundManager.setup({
-   useFastPolling: true,
+   useFastPolling: false,
    useHighPerformance: true,
    onready: function() {
       audio = soundManager.createSound({
-         id: 'audio',
-         url: 'http://freshly-ground.com/data/audio/mpc/20090119%20-%20Untitled%20Groove.mp3',
+         id: 'trepidation',
+         url: '../public/assets/audio/_mp3/trepidation.mp3',
          whileloading: function() {
             player.timeTotal.textContent = formatMilliseconds(audio.durationEstimate);
          },
@@ -139,4 +138,4 @@ player.btnNext.addEventListener('click', function() {
   angular
   .module('crossfadr', ['angularSoundManager'])
   .controller('SoundmanagerController', SoundmanagerController)
-}());
+});

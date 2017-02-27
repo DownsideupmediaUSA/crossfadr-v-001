@@ -2,7 +2,11 @@ Rails.application.routes.draw do
   root 'application#index'
   devise_for :users
 
+  get 'api/comments', to: 'comments#api_index'
+  get 'api/mixes', to: 'mixes#api_index'
+  get 'api/mixes/:id', to: 'mixes#api_show'
 
+  
   resources :djs, only: [:show, :edit]
 
   resources :mixes, only: [:create, :destroy, :update, :index, :show]

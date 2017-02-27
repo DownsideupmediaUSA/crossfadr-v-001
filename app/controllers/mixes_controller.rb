@@ -1,9 +1,24 @@
 class MixesController < ApplicationController
- before_action :set_mix, only: [:update, :shared_mix, :liked_mix, :destroy]
+ before_action :set_mix, only: [:update, :show, :shared_mix, :liked_mix, :destroy]
+
+
+  def api_index
+   @mixes = Mix.all
+   render json: @mixes
+  end
 
   def index
     mixes = Mix.all
     render json: mixes
+  end
+
+  def new
+    @mixes = Mix.new
+  end
+
+  def show
+
+
   end
 
   def create

@@ -6,23 +6,25 @@
   .config(function($stateProvider, $urlRouterProvider) {
        $stateProvider
            .state('home', {
-               url: '/',
+               url: '/home',
                templateUrl: 'home/home.html',
                controller: 'HomeController as vm'
            })
-          //  .state('home.mixes', {
-          //    url: '/mixes',
-          //    templateUrl: 'mixes/mixes.html',
-          //    controller: 'MixController as vm'
-          //  })
-          .state('home.soundmanager', {
-            url: '/soundmanager',
-            templateUrl: 'soundmanager2/soundmanager.html',
-            controller: 'SoundManagerController as vm'
-          })
+
+           .state('home.mixes', {
+             url: '/mixes',
+             templateUrl: 'mixes/mixes.html',
+             controller: 'MixController as vm'
+           })
+
+          // .state('home.soundmanager', {
+          //   url: '/soundmanager',
+          //   templateUrl: 'soundmanager2/soundmanager.html',
+          //   controller: 'SoundManagerController as vm'
+          // })
 
 
-       $urlRouterProvider.otherwise('/')
+       $urlRouterProvider.otherwise('home')
   })
 
 }());

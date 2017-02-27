@@ -1,0 +1,16 @@
+<%= form_for song, html: { multipart: true } do|f| %>
+  <div class="field"> <%= f.label :image %>:
+  <%= f.file_field :image %></div>
+  <div class="field"> <%= f.label :title %>:
+  <%= f.text_field :title %></div>
+  <div class="field">
+  Select an
+  <%= f.collection_select :artist_id, Artist.all, :id, :artist_name, :prompt => "Artist:" %> <br>
+  Select a
+  <%= f.collection_select :genre_id, Genre.all, :id, :genre_name, :prompt => "Genre:" %><br>
+
+
+
+  <%end%>
+    <%= f.submit "Create" %>
+  <%end%>

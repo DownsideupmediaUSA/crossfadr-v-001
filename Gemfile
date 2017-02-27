@@ -23,6 +23,8 @@ gem 'devise'
 
 gem 'bower-rails'
 
+gem "paperclip", "~> 5.0.0"
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
